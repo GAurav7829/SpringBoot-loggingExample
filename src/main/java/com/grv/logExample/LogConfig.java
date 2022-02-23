@@ -8,8 +8,8 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class LogConfig {
 	
-	private static Logger log = LoggerFactory.getLogger("com.baeldung");
-	private static Logger log2 = LoggerFactory.getLogger("com.baeldung.second");
+	private static Logger log = LoggerFactory.getLogger("test1");
+	private static Logger log2 = LoggerFactory.getLogger("test2");
 	
 	public static void testMethod() {
 		log.info("Hello log1");

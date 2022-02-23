@@ -3,6 +3,7 @@
 
     <property name="LOGS" value="C:/logs" />
     <property name="pattern1" value="%d %p %C{1.} [%t] %m%n" />
+    <property name="maxFileSize" value="10MB" />
 
     <appender name="Console"
         class="ch.qos.logback.core.ConsoleAppender">
@@ -28,7 +29,7 @@
             </fileNamePattern>
             <timeBasedFileNamingAndTriggeringPolicy
                 class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
-                <maxFileSize>10MB</maxFileSize>
+                <maxFileSize>${maxFileSize}</maxFileSize>
             </timeBasedFileNamingAndTriggeringPolicy>
         </rollingPolicy>
     </appender>
@@ -47,19 +48,19 @@
             </fileNamePattern>
             <timeBasedFileNamingAndTriggeringPolicy
                 class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
-                <maxFileSize>10MB</maxFileSize>
+                <maxFileSize>${maxFileSize}</maxFileSize>
             </timeBasedFileNamingAndTriggeringPolicy>
         </rollingPolicy>
     </appender>
 
     <!-- LOG "com.baeldung*" at TRACE level -->
-    <logger name="com.baeldung" level="trace" additivity="false">
+    <logger name="test1" level="trace" additivity="false">
         <appender-ref ref="log1" />
         <appender-ref ref="Console" />
     </logger>
     
     <!-- LOG "com.baeldung*" at TRACE level -->
-    <logger name="com.baeldung.second" level="trace" additivity="false">
+    <logger name="test2" level="trace" additivity="false">
         <appender-ref ref="log2" />
         <appender-ref ref="Console" />
     </logger>
