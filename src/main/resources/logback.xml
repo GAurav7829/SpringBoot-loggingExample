@@ -53,13 +53,13 @@
         </rollingPolicy>
     </appender>
 
-    <!-- LOG "com.baeldung*" at TRACE level -->
+    <!-- LOG "log1" at TRACE level -->
     <logger name="test1" level="trace" additivity="false">
         <appender-ref ref="log1" />
         <appender-ref ref="Console" />
     </logger>
     
-    <!-- LOG "com.baeldung*" at TRACE level -->
+    <!-- LOG "log2" at TRACE level -->
     <logger name="test2" level="trace" additivity="false">
         <appender-ref ref="log2" />
         <appender-ref ref="Console" />

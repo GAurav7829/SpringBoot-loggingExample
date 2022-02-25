@@ -3,10 +3,8 @@ package com.grv.logExample;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.context.annotation.Configuration;
 
-@Configuration
-public class LogConfig {
+public class TestLog {
 	
 	private static Logger log = LoggerFactory.getLogger("test1");
 	private static Logger log2 = LoggerFactory.getLogger("test2");
